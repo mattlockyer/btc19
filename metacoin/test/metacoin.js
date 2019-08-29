@@ -5,10 +5,10 @@ contract('MetaCoin', (accounts) => {
     const metaCoinInstance = await MetaCoin.deployed();
     const balance = await metaCoinInstance.getBalance.call(accounts[0]);
 
-    let instance = await MetaCoin.deployed()
-    let accounts = await web3.eth.getAccounts()
-    let ether = await instance.getBalanceInEth(accounts[0])
-    ether.toNumber()
+    // let instance = await MetaCoin.deployed()
+    // let accounts = await web3.eth.getAccounts()
+    // let ether = await instance.getBalanceInEth(accounts[0])
+    // ether.toNumber()
 
     assert.equal(balance.valueOf(), 10000, "10000 wasn't in the first account");
   });
